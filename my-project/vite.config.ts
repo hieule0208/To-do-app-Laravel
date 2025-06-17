@@ -14,6 +14,13 @@ export default defineConfig({
         react(),
         tailwindcss(),
     ],
+    server: {
+        hmr: {
+            host: process.env.CODESPACE_NAME ? process.env.CODESPACE_NAME + '-' + process.env.CODESPACE_PORT + '.app.github.dev' : undefined,
+            clientPort: process.env.CODESPACE_PORT ? 443 : undefined,
+            protocol: process.env.CODESPACE_NAME ? 'wss' : undefined
+        },
+    },
     esbuild: {
         jsx: 'automatic',
     },
