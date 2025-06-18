@@ -62,7 +62,7 @@ Dự án sử dụng cơ sở dữ liệu quan hệ gồm ba bảng chính: **Us
 
 ### Thuật toán thống kê dữ liệu tổng quan
 <p align="start">
-    <img src="Image-report/dashboard-diagram.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="300"/>
+    <img src="Image-report/dashboard-diagram.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="450"/>
 </p>
 
 #### Sơ đồ hoạt động: Lấy Dữ liệu cho Trang Chủ
@@ -116,13 +116,109 @@ flowchart TD
 8. **Kết thúc:**  
    Quá trình hoàn tất, trang dashboard được hiển thị cho người dùng.
 
-### Thuật toán hiển thị danh sách Task
-
-### Thuật toán hiển thị danh sách List
-
 ### Thuật toán thêm, sửa, xóa List
 
+<p align="start">
+    <img src="Image-report/lth-Trang-6.drawio.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="450"/>
+</p>
+
+**Chi tiết các bước:**
+
+1. **Kiểm tra đăng nhập:**  
+    Hệ thống kiểm tra người dùng đã đăng nhập chưa (`isLogined?`).  
+    - Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập (`route to "/login"`).
+    - Nếu đã đăng nhập, tiếp tục xử lý các thao tác với List.
+
+2. **Chọn thao tác:**  
+    Người dùng có thể thực hiện một trong ba thao tác: thêm List, sửa List, hoặc xóa List.
+
+---
+
+#### **Thêm List**
+- **Lấy dữ liệu từ Request:**  
+  Nhận dữ liệu List mới từ form gửi lên.
+- **Kiểm tra và xác thực dữ liệu:**  
+  Kiểm tra dữ liệu hợp lệ (ví dụ: tiêu đề không rỗng, mô tả hợp lệ).
+- **Tạo mới List với dữ liệu đã xác thực:**  
+  Lưu List mới vào cơ sở dữ liệu với thông tin đã xác thực.
+
+---
+
+#### **Sửa List**
+- **Lấy List cụ thể:**  
+  Truy vấn lấy List cần sửa dựa trên ID.
+- **Kiểm tra và xác thực dữ liệu:**  
+  Kiểm tra dữ liệu sửa đổi hợp lệ.
+- **Cập nhật List với dữ liệu đã xác thực:**  
+  Cập nhật thông tin List trong cơ sở dữ liệu.
+
+---
+
+#### **Xóa List**
+- **Lấy List cụ thể:**  
+  Truy vấn lấy List cần xóa dựa trên ID.
+- **Xóa List:**  
+  Thực hiện xóa List khỏi cơ sở dữ liệu.
+
+---
+
+3. **Chuyển hướng về trang danh sách:**  
+    Sau khi thực hiện thao tác (thêm, sửa, xóa), hệ thống chuyển hướng về trang danh sách (`lists.index`) và hiển thị thông báo thành công.
+
+4. **Kết thúc:**  
+    Quá trình thao tác với List hoàn tất.
+
 ### Thuật toán thêm, sửa, xóa Task
+
+<p align="start">
+    <img src="Image-report/lth-Trang-7.drawio.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="450"/>
+</p>
+
+**Chi tiết các bước:**
+
+1. **Kiểm tra đăng nhập:**  
+    Hệ thống kiểm tra người dùng đã đăng nhập chưa (`isLogined?`).  
+    - Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập (`route to "/login"`).
+    - Nếu đã đăng nhập, tiếp tục xử lý các thao tác với Task.
+
+2. **Chọn thao tác:**  
+    Người dùng có thể thực hiện một trong ba thao tác: thêm Task, sửa Task, hoặc xóa Task.
+
+---
+
+#### **Thêm Task**
+- **Lấy dữ liệu từ Request:**  
+  Nhận dữ liệu Task mới từ form gửi lên (tiêu đề, mô tả, ngày đến hạn, trạng thái...).
+- **Kiểm tra và xác thực dữ liệu:**  
+  Kiểm tra dữ liệu hợp lệ (ví dụ: tiêu đề không rỗng, ngày hợp lệ, liên kết đúng với List).
+- **Tạo mới Task với dữ liệu đã xác thực:**  
+  Lưu Task mới vào cơ sở dữ liệu với thông tin đã xác thực.
+
+---
+
+#### **Sửa Task**
+- **Lấy Task cụ thể:**  
+  Truy vấn lấy Task cần sửa dựa trên ID.
+- **Kiểm tra và xác thực dữ liệu:**  
+  Kiểm tra dữ liệu sửa đổi hợp lệ (tiêu đề, mô tả, trạng thái...).
+- **Cập nhật Task với dữ liệu đã xác thực:**  
+  Cập nhật thông tin Task trong cơ sở dữ liệu.
+
+---
+
+#### **Xóa Task**
+- **Lấy Task cụ thể:**  
+  Truy vấn lấy Task cần xóa dựa trên ID.
+- **Xóa Task:**  
+  Thực hiện xóa Task khỏi cơ sở dữ liệu.
+
+---
+
+3. **Chuyển hướng về trang danh sách Task:**  
+    Sau khi thực hiện thao tác (thêm, sửa, xóa), hệ thống chuyển hướng về trang danh sách Task (`tasks.index`) và hiển thị thông báo thành công.
+
+4. **Kết thúc:**  
+    Quá trình thao tác với Task hoàn tất.
 
 ## Giao diện thực tế
 
