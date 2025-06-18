@@ -62,7 +62,7 @@ Dự án sử dụng cơ sở dữ liệu quan hệ gồm ba bảng chính: **Us
 
 ### Thuật toán thống kê dữ liệu tổng quan
 <p align="start">
-    <img src="Image-report/dashboard-diagram.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="300"/>
+    <img src="Image-report/dashboard-diagram.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="250"/>
 </p>
 
 #### Sơ đồ hoạt động: Lấy Dữ liệu cho Trang Chủ
@@ -119,7 +119,7 @@ flowchart TD
 ### Thuật toán thêm, sửa, xóa List
 
 <p align="start">
-    <img src="Image-report/lth-Trang-6.drawio.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="300"/>
+    <img src="Image-report/lth-Trang-6.drawio.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="250"/>
 </p>
 
 **Chi tiết các bước:**
@@ -171,7 +171,7 @@ flowchart TD
 ### Thuật toán thêm, sửa, xóa Task
 
 <p align="start">
-    <img src="Image-report/lth-Trang-7.drawio.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="300"/>
+    <img src="Image-report/lth-Trang-7.drawio.png" alt="Thuật toán thống kê dữ liệu tổng quan" width="250"/>
 </p>
 
 **Chi tiết các bước:**
