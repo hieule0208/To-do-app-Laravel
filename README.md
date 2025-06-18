@@ -225,20 +225,20 @@ flowchart TD
 ### Giao diện màn hình chính
 
 <p align="start">
-    <img src="Image-report/Dashboard.png" alt="Giao diện Dashboard" width="700"/>
-    <img src="Image-report/Dashboard-reponsive.png" alt="Giao diện Dashboard Responsive" width="250"/>
+    <img src="Image-report/Dashboard.png" alt="Giao diện Dashboard" width="600"/>
+    <img src="Image-report/Dashboard-reponsive.png" alt="Giao diện Dashboard Responsive" width="200"/>
 </p>
 
 ### Giao diện danh sách List
 <p align="start">
-    <img src="Image-report/List.png" alt="Giao diện List" width="700"/>
-    <img src="Image-report/List-Reponsive.png" alt="Giao diện List Responsive" width="250"/>
+    <img src="Image-report/List.png" alt="Giao diện List" width="600"/>
+    <img src="Image-report/List-Reponsive.png" alt="Giao diện List Responsive" width="200"/>
 </p>
 
 ### Giao diện danh sách Task
 <p align="start">
-    <img src="Image-report/Task.png" alt="Giao diện Task" width="700"/>
-    <img src="Image-report/Task-Responsive.png" alt="Giao diện Task Responsive" width="250"/>
+    <img src="Image-report/Task.png" alt="Giao diện Task" width="600"/>
+    <img src="Image-report/Task-Responsive.png" alt="Giao diện Task Responsive" width="200"/>
 </p>
 
 ### Giao diện thêm List
